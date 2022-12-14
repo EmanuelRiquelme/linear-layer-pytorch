@@ -14,9 +14,7 @@ def linear_network(input_data = input_data,num_classes = 3):
     hidden_layer = np.random.rand(28**2,num_classes)
     input_data = input_data.reshape(-1)
     product = np.matmul(input_data,hidden_layer)
-    print(product)
     product = relu(product)
-    print(product)
     percentage = product/np.sum(product)
     return percentage,softmax(product)
 
